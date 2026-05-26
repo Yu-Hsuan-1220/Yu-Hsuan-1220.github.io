@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <circle cx="150" cy="150" r="150" fill="#1e1b4b"/>
+  <circle cx="150" cy="118" r="52" fill="#6366f1" opacity="0.85"/>
+  <ellipse cx="150" cy="260" rx="82" ry="58" fill="#6366f1" opacity="0.55"/>
+  <text x="150" y="134" text-anchor="middle" fill="white" font-size="52" font-weight="700" font-family="system-ui, sans-serif">YH</text>
+</svg>
