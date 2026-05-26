@@ -1,4 +1,18 @@
 /* =========================================
+   Easter egg — avatar hover swaps name
+   ========================================= */
+const avatarWrap   = document.querySelector('.avatar-wrap');
+const sidebarName  = document.querySelector('.sidebar-name');
+
+if (avatarWrap && sidebarName) {
+  const origHTML   = sidebarName.innerHTML;
+  const easterHTML = 'Kim Chaewon<br><span style="font-weight:400;font-size:0.9em;">Wife</span>';
+
+  avatarWrap.addEventListener('mouseenter', () => { sidebarName.innerHTML = easterHTML; });
+  avatarWrap.addEventListener('mouseleave', () => { sidebarName.innerHTML = origHTML;   });
+}
+
+/* =========================================
    0. Typed.js tagline
    ========================================= */
 const taglineEl = document.getElementById('tagline-typed');
