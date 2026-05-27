@@ -344,12 +344,17 @@
       <!-- ★ EDIT: Add your projects. Each card is one project. -->
       <div class="project-grid">
 
+        
+
         <article class="project-card glass-card">
           <div class="project-img-wrap">
             <img src="assets/project_image/mc_hackathon.png" alt="Guitar Tutor for the Blind" onerror="this.parentElement.innerHTML='<span class=\'img-placeholder\'>🖼️</span>'">
           </div>
           <div>
-            <h3 class="project-title">Guitar Tutor for the Blind</h3>
+            <div class="project-head">
+              <h3 class="project-title">Guitar Tutor for the Blind</h3>
+              <span class="project-date">Sep 2025</span>
+            </div>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">FastAPI</span>
@@ -373,7 +378,10 @@
             <img src="assets/project_image/DLP.png" alt="NYCU Deep Learning Labs" onerror="this.parentElement.innerHTML='<span class=\'img-placeholder\'>🖼️</span>'">
           </div>
           <div>
-            <h3 class="project-title">NYCU Deep Learning Labs</h3>
+            <div class="project-head">
+              <h3 class="project-title">NYCU Deep Learning Labs</h3>
+              <span class="project-date">Feb 2025</span>
+            </div>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">PyTorch</span>
@@ -396,7 +404,10 @@
             <img src="assets/project_image/LLMPaperSearchingBot.png" alt="LLM-Assisted Paper Search" onerror="this.parentElement.innerHTML='<span class=\'img-placeholder\'>🖼️</span>'">
           </div>
           <div>
-            <h3 class="project-title">LLM-Assisted Paper Search</h3>
+            <div class="project-head">
+              <h3 class="project-title">LLM-Assisted Paper Search</h3>
+              <span class="project-date">Sep 2025</span>
+            </div>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">LangChain</span>
@@ -414,7 +425,35 @@
             </div>
           </div>
         </article>
-
+        <article class="project-card glass-card has-play">
+          <div class="project-img-wrap">
+            <img src="assets/project_image/zombie2d.png" alt="2D Zombie Survival Game" onerror="this.parentElement.innerHTML='<span class=\'img-placeholder\'>🎮</span>'">
+          </div>
+          <div>
+            <div class="project-head">
+              <h3 class="project-title">2D Zombie Survival</h3>
+              <span class="project-date">Aug 2023</span>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Dev</span>
+              <span class="tag">2D Physics</span>
+            </div>
+            <ul class="project-desc-list">
+              <li>Solo-developed 2D survival shooter — survive 15 minutes of escalating zombie waves</li>
+              <li>Collect XP to level up; pick 1-of-3 upgrades from 11 skills and 5-tier weapons</li>
+              <li>Built entirely from scratch in C#: status effects (freeze / slow / burn / knockback), coroutines, and late-game frame-rate optimization</li>
+            </ul>
+            <div class="pill-links">
+              <a href="https://github.com/Yu-Hsuan-1220/2D_Zombie_Survival" class="pill-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <a class="project-play" href="https://zombie2d.yhlizzz.com/" target="_blank" rel="noopener" aria-label="Play 2D Zombie Survival">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span>Play</span>
+          </a>
+        </article>
       </div>
     </section>
 

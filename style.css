@@ -753,11 +753,46 @@ img { max-width: 100%; display: block; }
   gap: 0.15rem;
 }
 
+.project-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+
 .project-title {
   font-family: var(--font-heading);
   font-size: 0.93rem;
   font-weight: 600;
   color: var(--text-primary);
+}
+
+.project-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-card);
+  padding: 1px 9px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-date::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-secondary);
+  flex-shrink: 0;
 }
 
 .project-tags {
@@ -811,6 +846,51 @@ img { max-width: 100%; display: block; }
   background: var(--accent-primary);
   color: #fff;
   text-decoration: none;
+}
+
+/* =========================================
+   Project "Play" button (right column)
+   ========================================= */
+.project-card.has-play {
+  grid-template-columns: 220px 1fr auto;
+}
+
+.project-play {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-play:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow-hover);
+  text-decoration: none;
+}
+
+.project-play .play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+  padding-left: 2px; /* optically center the ▶ glyph */
 }
 
 /* =========================================
@@ -1017,13 +1097,27 @@ footer {
     height: 140px;
   }
 
-  .project-card {
+  .project-card,
+  .project-card.has-play {
     grid-template-columns: 120px 1fr;
   }
 
   .project-img-wrap {
     width: 120px;
     height: 88px;
+  }
+
+  .project-card.has-play .project-play {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+  }
+
+  .project-card.has-play .play-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
   }
 }
 
