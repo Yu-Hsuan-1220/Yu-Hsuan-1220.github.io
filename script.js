@@ -78,7 +78,7 @@ if (!prefersReducedMotion) {
 /* =========================================
    4. Scrollspy — active sidebar nav link
    ========================================= */
-const sectionIds = ['about', 'experience', 'news', 'projects', 'teaching', 'contact'];
+const sectionIds = ['about', 'experience', 'news', 'publications', 'projects', 'teaching', 'contact'];
 const navLinks = {};
 
 sectionIds.forEach(id => {
