@@ -802,7 +802,9 @@ img { max-width: 100%; display: block; }
 }
 
 .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-family: var(--font-heading);
   font-size: 0.7rem;
   font-weight: 600;
@@ -810,6 +812,11 @@ img { max-width: 100%; display: block; }
   background: var(--accent-light);
   color: var(--accent-secondary);
   border-radius: var(--radius-sm);
+}
+
+.tag i {
+  font-size: 0.9em;
+  opacity: 0.9;
 }
 
 .project-desc {
@@ -830,7 +837,9 @@ img { max-width: 100%; display: block; }
 }
 
 .pill-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 600;
@@ -840,6 +849,10 @@ img { max-width: 100%; display: block; }
   color: var(--accent-primary);
   text-decoration: none;
   transition: background var(--transition), color var(--transition);
+}
+
+.pill-link i {
+  font-size: 0.92em;
 }
 
 .pill-link:hover {

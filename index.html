@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
@@ -179,8 +180,9 @@
       <img src="assets/NYCU.png" alt="NYCU" height="52">
       <div class="ttitle">B.S. in Computer Science</div>
       <div class="tdesc">National Yang Ming Chiao Tung University (NYCU)</div>
+      <div class="tdesc" style="font-weight: 500;">GPA: 4.28 / 4.3</div>
       <div class="tdetails">
-        <div class="tdesc" style="font-weight: 500;">GPA: 4.28 / 4.3</div>
+        <div class="tdesc">Rank: 2 / 197 (1.02%)</div>
         <div class="tdesc">Advisor: Prof. Yu-Lun Liu</div>
       </div>
       <button class="texpand-btn">Show more</button>
@@ -298,45 +300,33 @@
     </section>
 
     <!-- ===== PUBLICATIONS ===== -->
-    <!-- <section id="publications" class="section fade-in-section">
+    <section id="publications" class="section fade-in-section">
       <h2 class="section-title">Publications</h2>
       <div class="pub-list">
 
         <article class="pub-card glass-card">
           <div class="pub-thumb">
-            <img src="assets/pub-thumb-1.jpg" alt="Paper thumbnail" onerror="this.parentElement.innerHTML='<span class=\'thumb-placeholder\'>📄</span>'">
+            <img src="assets/yocausal_teaser.jpg" alt="YoCausal teaser" onerror="this.parentElement.innerHTML='<span class=\'thumb-placeholder\'>📄</span>'">
           </div>
           <div class="pub-body">
-            <span class="venue-badge">CVPR 2025</span>
-            <h3 class="pub-title">[Paper Title Goes Here]</h3>
-            <p class="pub-authors"><strong>Yu-Hsuan Li</strong>, Author B, Author C, Advisor Name</p>
-            <p class="pub-desc">One-sentence summary of what the paper does and why it matters.</p>
+            <span class="venue-badge">arXiv 2026</span>
+            <h3 class="pub-title">YoCausal: How Far is Video Generation from World Model? A Causality Perspective</h3>
+            <p class="pub-authors">You-Zhe Xie*, <strong>Yu-Hsuan Li*</strong>, Jie-Ying Lee, Kaipeng Zhang, Yu-Lun Liu&dagger;, Zhixiang Wang&dagger;</p>
+            <p class="pub-authors" style="font-size:0.82em;opacity:0.7;margin-top:-4px;">*Equal contribution &nbsp;&dagger;Corresponding authors</p>
+            <p class="pub-desc">The first benchmark evaluating causal understanding in video generation models.  Our benchmark can incorporate any real-world video at zero cost, making it arbitrarily extensible to easily assess video generation models' understanding of diverse types of causality. </p>
             <div class="pill-links">
-              <a href="#" class="pill-link">Paper</a>
-              <a href="#" class="pill-link">Code</a>
-              <a href="#" class="pill-link">Project Page</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pub-card glass-card">
-          <div class="pub-thumb">
-            <img src="assets/pub-thumb-2.jpg" alt="Paper thumbnail" onerror="this.parentElement.innerHTML='<span class=\'thumb-placeholder\'>📄</span>'">
-          </div>
-          <div class="pub-body">
-            <span class="venue-badge">NeurIPS 2024</span>
-            <h3 class="pub-title">[Another Paper Title]</h3>
-            <p class="pub-authors">Author A, <strong>Yu-Hsuan Li</strong>, Author C</p>
-            <p class="pub-desc">Brief description of this paper's contribution.</p>
-            <div class="pill-links">
-              <a href="#" class="pill-link">Paper</a>
-              <a href="#" class="pill-link">Code</a>
+              <a href="https://www.youzhexie.me/papers/YoCausal/index.html" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i>Project Page</a>              
+              <a href="https://arxiv.org/abs/2605.30346" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i>Paper</a>
+              <a href="https://github.com/youzhe0305/YoCausal" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i>Code</a>
+              <a href="https://huggingface.co/datasets/YouZhe/YoCausal-dataset" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-database" aria-hidden="true"></i>Dataset</a>
+              <a href="https://youtu.be/dCaAfWTUCFA" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i>Video</a>
+              <a href="https://huggingface.co/papers/2605.30346" class="pill-link" target="_blank" rel="noopener"><span aria-hidden="true">&#129303;</span>HuggingFace</a>
             </div>
           </div>
         </article>
 
       </div>
-    </section> -->
+    </section>
 
     <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section fade-in-section">
@@ -356,10 +346,10 @@
               <span class="project-date">Sep 2025</span>
             </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">React</span>
-              <span class="tag">Google AI</span>
+              <span class="tag"><i class="fab fa-python" aria-hidden="true"></i>Python</span>
+              <span class="tag"><i class="fas fa-bolt" aria-hidden="true"></i>FastAPI</span>
+              <span class="tag"><i class="fab fa-react" aria-hidden="true"></i>React</span>
+              <span class="tag"><i class="fab fa-google" aria-hidden="true"></i>Google AI</span>
             </div>
             <ul class="project-desc-list">
               <li>2025 MC Hackathon × Google — AI-powered mobile web app for visually impaired users to learn guitar</li>
@@ -367,8 +357,8 @@
               <li>Python / FastAPI backend + React frontend over local HTTPS to Android</li>
             </ul>
             <div class="pill-links">
-              <a href="https://github.com/Yu-Hsuan-1220/Hackathon_Google" class="pill-link" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://docs.google.com/presentation/d/1W2QEYaWWUinhLYiLKAf_Vgd08aZ-4Hz9/edit?slide=id.p1#slide=id.p1" class="pill-link" target="_blank" rel="noopener">Slides</a>
+              <a href="https://github.com/Yu-Hsuan-1220/Hackathon_Google" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+              <a href="https://docs.google.com/presentation/d/1W2QEYaWWUinhLYiLKAf_Vgd08aZ-4Hz9/edit?slide=id.p1#slide=id.p1" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-file-powerpoint" aria-hidden="true"></i>Slides</a>
             </div>
           </div>
         </article>
@@ -383,10 +373,10 @@
               <span class="project-date">Feb 2025</span>
             </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Diffusion</span>
-              <span class="tag">RL</span>
+              <span class="tag"><i class="fab fa-python" aria-hidden="true"></i>Python</span>
+              <span class="tag"><i class="fas fa-fire" aria-hidden="true"></i>PyTorch</span>
+              <span class="tag"><i class="fas fa-magic" aria-hidden="true"></i>Diffusion</span>
+              <span class="tag"><i class="fas fa-robot" aria-hidden="true"></i>RL</span>
             </div>
             <ul class="project-desc-list">
               <li>7 labs for NYCU Deep Learning &amp; Practice course — scored 97/100 and 96/100</li>
@@ -394,7 +384,7 @@
               <li>Conditional image generation (DDPM) and reinforcement learning (DQN, PPO, A2C)</li>
             </ul>
             <div class="pill-links">
-              <a href="https://github.com/Yu-Hsuan-1220/NYCU_Deep_learning" class="pill-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://github.com/Yu-Hsuan-1220/NYCU_Deep_learning" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
             </div>
           </div>
         </article>
@@ -409,10 +399,10 @@
               <span class="project-date">Jun 2024</span>
             </div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">RAG</span>
-              <span class="tag">Discord</span>
+              <span class="tag"><i class="fab fa-python" aria-hidden="true"></i>Python</span>
+              <span class="tag"><i class="fas fa-link" aria-hidden="true"></i>LangChain</span>
+              <span class="tag"><i class="fas fa-search" aria-hidden="true"></i>RAG</span>
+              <span class="tag"><i class="fab fa-discord" aria-hidden="true"></i>Discord</span>
             </div>
             <ul class="project-desc-list">
               <li>Discord bot for natural language arXiv paper retrieval and bilingual summarization</li>
@@ -420,8 +410,8 @@
               <li>96.6% content relevance across 30 test cases</li>
             </ul>
             <div class="pill-links">
-              <a href="https://github.com/NYCU-AI-intro/Intro-AI-Final-Project" class="pill-link" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://youzhe0305.github.io/Team-Project/LLM-paper-search/" class="pill-link" target="_blank" rel="noopener">Blog</a>
+              <a href="https://github.com/NYCU-AI-intro/Intro-AI-Final-Project" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+              <a href="https://youzhe0305.github.io/Team-Project/LLM-paper-search/" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-blog" aria-hidden="true"></i>Blog</a>
             </div>
           </div>
         </article>
@@ -435,10 +425,10 @@
               <span class="project-date">Aug 2023</span>
             </div>
             <div class="project-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
-              <span class="tag">Game Dev</span>
-              <span class="tag">2D Physics</span>
+              <span class="tag"><i class="fab fa-unity" aria-hidden="true"></i>Unity</span>
+              <span class="tag"><i class="fas fa-hashtag" aria-hidden="true"></i>C#</span>
+              <span class="tag"><i class="fas fa-gamepad" aria-hidden="true"></i>Game Dev</span>
+              <span class="tag"><i class="fas fa-atom" aria-hidden="true"></i>2D Physics</span>
             </div>
             <ul class="project-desc-list">
               <li>Solo-developed 2D survival shooter — survive 15 minutes of escalating zombie waves</li>
@@ -446,8 +436,8 @@
               <li>Built entirely from scratch in C#: status effects (freeze / slow / burn / knockback), coroutines, and late-game frame-rate optimization</li>
             </ul>
             <div class="pill-links">
-              <a href="https://github.com/Yu-Hsuan-1220/2D_Zombie_Survival" class="pill-link" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://hotpotgame.yhlizzz.com/" class="pill-link" target="_blank" rel="noopener">Hotpot</a>
+              <a href="https://github.com/Yu-Hsuan-1220/2D_Zombie_Survival" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+              <a href="https://hotpotgame.yhlizzz.com/" class="pill-link" target="_blank" rel="noopener"><i class="fas fa-utensils" aria-hidden="true"></i>Hotpot</a>
             </div>
           
           </div>
@@ -472,7 +462,7 @@
               <p class="teaching-role">Teaching Assistant · <a href="https://people.cs.nycu.edu.tw/~ttyeh/course/2026_Spring/CS10014/outline.html" target="_blank" rel="noopener">National Yang Ming Chiao Tung University</a></p>
             </div>
             <div class="pill-links" style="margin-top:0; flex-shrink:0;">
-              <a href="https://github.com/nycu-caslab/CO2026" class="pill-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://github.com/nycu-caslab/CO2026" class="pill-link" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
             </div>
           </div>
           <p class="teaching-note">Responsible for designing and grading Labs 3 – 5:</p>
