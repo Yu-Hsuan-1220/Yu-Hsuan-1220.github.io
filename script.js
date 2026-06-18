@@ -105,14 +105,21 @@ sectionIds.forEach(id => {
 const newsItems  = Array.from(document.querySelectorAll('.news-item'));
 const newsToggle = document.getElementById('news-toggle');
 const filterBtns = document.querySelectorAll('.filter-btn');
+const subfilter     = document.getElementById('news-subfilter');
+const subfilterBtns = document.querySelectorAll('.subfilter-btn');
 const NEWS_PREVIEW = 5;
-let currentFilter = 'all';
-let newsExpanded  = false;
+let currentFilter    = 'all';
+let currentSubfilter = 'all';
+let newsExpanded     = false;
 
 function renderNews() {
-  const visible = currentFilter === 'all'
+  let visible = currentFilter === 'all'
     ? newsItems
     : newsItems.filter(el => el.dataset.category === currentFilter);
+
+  if (currentFilter === 'education-award' && currentSubfilter !== 'all') {
+    visible = visible.filter(el => el.dataset.subcategory === currentSubfilter);
+  }
 
   newsItems.forEach(el => el.style.display = 'none');
 
@@ -136,6 +143,24 @@ filterBtns.forEach(btn => {
     btn.classList.add('active');
     currentFilter = btn.dataset.filter;
     newsExpanded  = false;
+
+    // Show the award sub-filter only under "Education Award"; reset it otherwise.
+    const showSub = currentFilter === 'education-award';
+    if (subfilter) subfilter.hidden = !showSub;
+    if (!showSub) {
+      currentSubfilter = 'all';
+      subfilterBtns.forEach(b => b.classList.toggle('active', b.dataset.subfilter === 'all'));
+    }
+
+    renderNews();
+  });
+});
+
+subfilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    subfilterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSubfilter = btn.dataset.subfilter;
     renderNews();
   });
 });
