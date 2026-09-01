@@ -147,10 +147,15 @@
       <div class="tdate">June 2026 – Present</div>
       <img src="assets/google.png" alt="Google" height="52">
       <div class="ttitle">Software Engineering Intern</div>
-      <div class="tdesc">Google Banqiao Office</div>
+      <div class="tdesc">Google Taiwan (Banqiao Office) &middot; Pixel Core Infrastructure &mdash; Test Infrastructure &amp; Observability</div>
       <div class="tdetails">
         <div class="tdesc" style="margin-top: 5px;">
-          SWE intern at Google Taiwan.
+          Worked on test infrastructure and observability for Android/Pixel kernel regression triage:
+          <ul style="margin: 5px 0 0 18px; padding: 0; font-size: 0.9em;">
+            <li>Automated test-configuration generation for an internal regression <strong>root-cause isolation service</strong> across Android/Pixel kernel builds, cutting triage MTTR from <strong>1&ndash;3 days to under 2 hours</strong>.</li>
+            <li>Closed the remediation loop with an <strong>event-driven architecture</strong> (<strong>Cloud Pub/Sub</strong>, config propagation polling) to autonomously resume culprit bisection, reducing manual toil from ~1 hour to a <strong>1-click approval</strong>.</li>
+            <li>Engineered a scheduled <strong>SQL data pipeline</strong> and operational dashboard aggregating issue-tracker logs into key metrics (regression volume, bisection accuracy) and surfacing blocked issues at a glance so engineers can rapidly unblock stuck regressions.</li>
+          </ul>
         </div>
       </div>
       <button class="texpand-btn">Show more</button>
