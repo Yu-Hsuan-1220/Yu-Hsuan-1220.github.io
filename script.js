@@ -112,6 +112,30 @@ let currentFilter    = 'all';
 let currentSubfilter = 'all';
 let newsExpanded     = false;
 
+// Dates are written as "June 2026" in the HTML; show them as a two-digit
+// month under a per-year heading instead.
+const MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+const newsYears = new Map(); // year -> heading <li>
+
+newsItems.forEach(el => {
+  const dateEl = el.querySelector('.news-date');
+  const [mon, year] = dateEl.textContent.trim().split(/\s+/);
+  const m = MONTHS.indexOf(mon.slice(0, 3).toLowerCase()) + 1;
+  if (!year || m === 0) return;
+
+  el.dataset.year = year;
+  dateEl.title = dateEl.textContent.trim();
+  dateEl.textContent = String(m).padStart(2, '0');
+
+  if (!newsYears.has(year)) {
+    const heading = document.createElement('li');
+    heading.className = 'news-year';
+    heading.textContent = year;
+    el.before(heading);
+    newsYears.set(year, heading);
+  }
+});
+
 function renderNews() {
   let visible = currentFilter === 'all'
     ? newsItems
@@ -135,6 +159,11 @@ function renderNews() {
     visible.forEach(el => el.style.display = '');
     if (newsToggle) newsToggle.style.display = 'none';
   }
+
+  newsYears.forEach((heading, year) => {
+    const any = newsItems.some(el => el.dataset.year === year && el.style.display !== 'none');
+    heading.style.display = any ? '' : 'none';
+  });
 }
 
 filterBtns.forEach(btn => {

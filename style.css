@@ -619,31 +619,65 @@ img { max-width: 100%; display: block; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 }
 
-.news-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  font-size: 0.88rem;
-  padding-bottom: 0.75rem;
+/* Year heading, inserted by script.js before the first item of each year */
+.news-year {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  padding-bottom: 0.4rem;
+  margin: 1.25rem 0 0.35rem;
   border-bottom: 1px solid var(--accent-light);
 }
 
-.news-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.news-year:first-child {
+  margin-top: 0;
+}
+
+/* Each item carries a slice of the vertical line plus a hollow dot */
+.news-item {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  padding: 0.4rem 0 0.4rem 1.6rem;
+}
+
+.news-item::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--timeline-line);
+}
+
+.news-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(0.4rem + 0.45em);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  background: var(--bg-base);
+  z-index: 1;
 }
 
 .news-date {
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-secondary);
+  color: var(--text-muted);
   white-space: nowrap;
   padding-top: 0.1rem;
-  min-width: 70px;
+  font-variant-numeric: tabular-nums;
 }
 
 .news-text {
