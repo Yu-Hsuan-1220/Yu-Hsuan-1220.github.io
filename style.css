@@ -472,6 +472,11 @@ img { max-width: 100%; display: block; }
   margin-left: auto;
 }
 
+/* Bullet lists read badly right-aligned; keep them left-aligned on left-side items */
+.timelineitem:nth-child(even) .tdetails ul {
+  text-align: left;
+}
+
 /* Date */
 .tdate {
   font-family: var(--font-heading);
