@@ -811,7 +811,8 @@ img { max-width: 100%; display: block; }
   justify-content: center;
 }
 
-.project-img-wrap img {
+.project-img-wrap img,
+.project-img-wrap video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1287,4 +1288,65 @@ footer {
   .timelineitem:nth-child(even) img {
     margin-left: 0;
   }
+}
+
+/* =========================================
+   Lightbox — click publication / project media to enlarge
+   ========================================= */
+.pub-thumb img,
+.pub-thumb video,
+.project-img-wrap img,
+.project-img-wrap video {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  background: rgba(8, 10, 16, 0.88);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img,
+.lightbox video {
+  max-width: min(1400px, 100%);
+  max-height: calc(100vh - 96px);
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
